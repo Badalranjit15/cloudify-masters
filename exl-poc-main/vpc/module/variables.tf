@@ -7,26 +7,21 @@ variable "region" {
 variable "vpc_name" {
   type        = string
   description = "Name of the VPC"
-  default     = "example-vpc"
+  default     = ""
 }
 
 variable "vpc_cidr" {
   type        = string
   description = "CIDR address for the VPC"
-  default     = "10.0.0.0/16"
+  default     = ""
 }
 
 variable "private_subnets" {
   type        = list(string)
   description = "List of private subnets to create within the VPC"
-  default     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  default     = []
 }
 
-variable "public_subnets" {
-  type        = list(string)
-  description = "List of public subnets to create within the VPC"
-  default     = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
-}
 
 variable "enable_nat_gateway" {
   type        = bool
