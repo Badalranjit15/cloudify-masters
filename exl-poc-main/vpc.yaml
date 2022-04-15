@@ -31,37 +31,20 @@ inputs:
     type: string
     description: CIDR address for the VPC
     display_label: VPC CIDR
-    default: 10.0.0.0/16
+    default: 
 
   private_subnets:
     type: list
     description: List of private subnets to create within the VPC
     display_label: Private Subnets
-    default:
-      - 10.0.1.0/24
-      - 10.0.2.0/24
-      - 10.0.3.0/24
-
-  public_subnets:
-    type: list
-    description: List of public subnets to create within the VPC
-    display_label: Public Subnets
-    default:
-      - 10.0.101.0/24
-      - 10.0.102.0/24
-      - 10.0.103.0/24
+    default:      
 
   enable_nat_gateway:
     type: boolean
     description: Whether or not to enable a NAT gateway for the private subnets
     display_label: Enable NAT Gateway
-    default: true
-
-  enable_vpn_gateway:
-    type: boolean
-    description: Whether or not to enable a VPN gateway
-    display_label: Enable VPN Gateway
     default: false
+
 
 node_templates:
 
